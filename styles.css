@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.diceboxes {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px;
+}
+.die {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#dieface,
+#dieface2 {
+  display: none;
+  width: 150px;
+  height: 150px;
+}
+
+/* 
+h1{
+}
+*/
+#userbox {
+  visibility: visible;
+}
+label {
+}
+
+#userinput {
+}
+
+.playernumber {
+}
+
+.diebox {
+}
+
+.score {
+}
+
+#scoreValuePlayer1 {
+}
+*/
+
+/* .die {
+  background-color: teal; */
+/* } */
+.squareofdie {
+}

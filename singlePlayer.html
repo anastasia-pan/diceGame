@@ -9,17 +9,25 @@
 </head>
 
 <body class="showDivs">
-    <div class="namofgame">
-        <h1>Roll that die</h1>
+    <div class="header">
+        <div class="namofgame">
+            <h1 id="name">Roll that die</h1>
+        </div>
+        <div class="toggle">
+            <a href="index.html">
+                <h3>2 players here</h3>
+            </a>
+        </div>
+    </div>
+    <div class="explainscore">
+        <h2 id="topscore">Don't go above 20!</h2>
     </div>
     <div id="userbox">
-        <label id="whatscore">What is your desired score?</label>
+        <label id="whatscore">Change the score ceiling here</label>
         <input id="userinput">
         <button id="inputButton">submit</button>
     </div>
-    <div class="explaingscore">
-        <h2 id="topscore"></h2>
-    </div>
+
 
     <div class="diebox1">
         <div class="playernumber">
@@ -30,7 +38,6 @@
             <p id="scoreValuePlayer1">0</p>
         </div>
         <div id="die">
-
             <div class="thisroll"> </div>
             <div class="squareofdie">
                 <img id="dieface" src="./dice/Dice1.svg" alt="Dice face">
@@ -38,7 +45,7 @@
             <audio id="sound" src="./dieRoll.mp3"></audio>
         </div>
         <div id="numberText">
-            <p></p>
+            <p class="result"></p>
         </div>
         <div class="throw">
             <button id="throwButton">Throw</button>
@@ -47,37 +54,13 @@
 
 
     </div>
-
-    <div class="diebox1">
-        <div class="playernumber">
-            <h2>Player 1</h2>
-        </div>
-        <div id=score>
-            <h3>Your score is:</h3>
-            <p id="scoreValuePlayer1">0</p>
-        </div>
-        <div id="die">
-
-            <div class="thisroll"> </div>
-            <div class="squareofdie">
-                <img id="dieface" src="./dice/Dice1.svg" alt="Dice face">
-            </div>
-            <audio id="sound" src="./dieRoll.mp3"></audio>
-        </div>
-        <div id="numberText">
-            <p></p>
-        </div>
-        <div class="throw">
-            <button id="throwButton">Throw</button>
-        </div>
-
 
 
     </div>
     <div id="resetButton">
         <button onclick="location.reload()" ;>Reset</button>
     </div>
-    <script src=" app.js"></script>
+    <script src="singlePlayer.js"></script>
 </body>
 
 </html>

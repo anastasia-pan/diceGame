@@ -1,21 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&family=Libre+Baskerville&family=M+PLUS+1+Code:wght@100;300&family=Mukta:wght@200&family=Open+Sans:wght@300;400&family=Outfit:wght@200;300&family=Special+Elite&display=swap");
+
+* {
+  font-family: "Special Elite", cursive;
+}
+
+a,
+a:visited {
+  text-decoration: underline;
+  text-decoration-color: none;
+  color: black;
+}
+a:hover {
+  color: green;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#name {
+  display: flex;
+  justify-self: center;
+}
+.toggle {
+  display: flex;
+  justify-self: end;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .diceboxes {
-  width: 70%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 50px;
+  justify-content: space-around;
+  margin: 20px;
 }
-.die {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+input {
+  padding: 15px 32px;
 }
 
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px;
+}
+
+.die {
+  width: 180px;
+  height: 200px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.diebox1,
+.diebox2 {
+  width: 180px;
+  margin: 30px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.squareofdie {
+  width: 150px;
+  height: 150px;
+}
 #dieface,
 #dieface2 {
   display: none;
@@ -23,34 +88,39 @@ body {
   height: 150px;
 }
 
-/* 
-h1{
-}
-*/
-#userbox {
-  visibility: visible;
-}
-label {
+#scoreValuePlayer1,
+#scoreValuePlayer2 {
+  font-size: 30px;
+  color: red;
 }
 
-#userinput {
+#numberText,
+#numberText2 {
+  margin: 20px;
+  font-size: 20px;
 }
 
-.playernumber {
-}
-
-.diebox {
-}
-
-.score {
-}
-
-#scoreValuePlayer1 {
-}
-*/
-
-/* .die {
-  background-color: teal; */
-/* } */
-.squareofdie {
+@media only screen and (max-width: 480px) {
+  #userbox {
+    margin-left: 20%;
+  }
+  #userinput {
+    margin-top: 5px;
+  }
+  #inputButton {
+    margin-left: 22%;
+  }
+  .die {
+    height: 150px;
+  }
+  .squareofdie {
+    width: 80px;
+    height: 80px;
+  }
+  #dieface,
+  #dieface2 {
+    display: none;
+    width: 80px;
+    height: 80px;
+  }
 }

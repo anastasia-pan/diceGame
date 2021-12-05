@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Do or Die</title>
+    <title>Do or Die?</title>
 </head>
 
 <body class="showDivs">
-    <div class="namofgame">
-        <h1>Roll that die</h1>
+    <div class="header">
+        <div class="namofgame">
+            <h1>Roll the dice</h1>
+        </div>
+        <div class="toggle">
+            <a href="singlePlayer.html">
+                <h3>Single player here</h3>
+            </a>
+        </div>
+    </div>
+    <div class="explainscore">
+        <h2 id="topscore">Don't go above 20!</h2>
     </div>
     <div id="userbox">
-        <label id="whatscore">What is your desired score?</label>
+        <label id="whatscore">Change the score ceiling here</label>
         <input id="userinput">
         <button id="inputButton">submit</button>
     </div>
-    <div class="explaingscore">
-        <h2 id="topscore"></h2>
-    </div>
+
     <div class="diceboxes">
         <!-- diebox1 code -->
         <div class="diebox1">
@@ -30,16 +38,17 @@
                 <h3>Your score is:</h3>
                 <p id="scoreValuePlayer1">0</p>
             </div>
-            <div id="die">
+            <div class="die">
                 <div class="thisroll"> </div>
                 <div class="squareofdie">
                     <img id="dieface" src="./dice/Dice1.svg" alt="Dice face">
                 </div>
                 <audio id="sound" src="./dieRoll.mp3"></audio>
+                <div id="numberText">
+                    <p class="result"></p>
+                </div>
             </div>
-            <div id="numberText">
-                <p></p>
-            </div>
+
             <div class="throw">
                 <button id="throwButton">Throw</button>
             </div>
@@ -61,10 +70,11 @@
                     <img id="dieface2" src="./dice/Dice1.svg" alt="Dice face">
                 </div>
                 <audio id="sound" src="./dieRoll.mp3"></audio>
+                <div id="numberText2">
+                    <p class="result"></p>
+                </div>
             </div>
-            <div id="numberText2">
-                <p></p>
-            </div>
+
             <div class="throw2">
                 <button id="throwButton2">Throw</button>
             </div>
@@ -74,7 +84,7 @@
         </div>
     </div>
     <div>
-        <h2 id="winnerhere">Hello</h2>
+        <h2 id="winnerhere"></h2>
     </div>
     <div id="resetButton">
         <button onclick="location.reload()" ;>Reset</button>

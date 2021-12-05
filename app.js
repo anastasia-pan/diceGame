@@ -25,6 +25,7 @@ function getRandomArbitrary() {
 
 const player1 = {
   loser: false,
+  winner: false,
   name: "Player 1",
   throwValue: 0,
   numberText: document.getElementById("numberText"),
@@ -34,15 +35,9 @@ const player1 = {
   throwButton: document.getElementById("throwButton"),
 };
 
-console.log(
-  player1.loser,
-  player1.name,
-  player1.throwValue,
-  player1.numberText
-);
-
 const player2 = {
   loser: false,
+  winner: false,
   name: "Player 2",
   throwValue: 0,
   numberText: document.getElementById("numberText2"),
@@ -70,39 +65,65 @@ const returnloser = (player) => {
     player.numberText.textContent = "You rolled a 1, you lose!";
     player.throwButton.style.display = "none";
     player.loser = true;
-  }
-  console.log("Test1");
-  if (player.score > desiredscore) {
+  } else if (player.score > desiredscore) {
     player.numberText.textContent = `You rolled a ${player.throwValue}, your score is above ${desiredscore}, you lose!`;
     player.scoretext.textContent = player.score;
     player.throwButton.style.display = "none";
     player.loser = true;
   } else {
-    player.numberText.textContent = `You rolled a ${player.throwValue}, your score is ${player.score}`;
+    player.numberText.textContent = `You rolled a ${player.throwValue}, your score is ${player.score}.`;
     player.scoretext.textContent = player.score;
   }
 
   if (player.loser == true) {
     winnerhere.textContent = `${player.name} lost!`;
-    thisThrow1.style.display = "none";
-    thisThrow2.style.display = "none";
+    player1.throwButton.style.display = "none";
+    player2.throwButton.style.display = "none";
   }
 };
 
-player1.throwButton.addEventListener("click", () => {
-  //hide this throw button, appear the other player's
-  player1.throwButton.style.display = "hide";
-  player2.throwButton.style.display = "block";
+const hidebuttons = () => {
+  if ((player1.throwButton.style.display = "block")) {
+    player1.throwButton.style.display = "hide";
+    player2.throwButton.style.display = "block";
+    return;
+  } else if ((player2.throwButton.style.display = "block")) {
+    player1.throwButton.style.display = "hide";
+    player2.throwButton.style.display = "block";
+    return;
+  }
+};
 
-  //add a new value to throwValue between 1-6
-  player1.throwValue = getRandomArbitrary();
-  //update score with new throwValue
-  player1.score += throwValue;
-  replaceImage;
-  replaceImage(player1);
-  sound.play();
-  returnloser(player1);
-});
+const roll = (player) => {
+  player.throwButton.addEventListener("click", () => {
+    //hide this throw button, appear the other player's
+    hidebuttons();
+    //add a new value to throwValue between 1-6
+    player.throwValue = getRandomArbitrary();
+    //update score with new throwValue
+    player.score += throwValue;
+
+    replaceImage(player);
+    sound.play();
+    returnloser(player);
+  });
+};
+
+roll(player1);
+roll(player2);
+// };
+// player1.throwButton.addEventListener("click", () => {
+//   //hide this throw button, appear the other player's
+//   hidebuttons();
+//   //add a new value to throwValue between 1-6
+//   player1.throwValue = getRandomArbitrary();
+//   //update score with new throwValue
+//   player1.score += throwValue;
+
+//   replaceImage(player1);
+//   sound.play();
+//   returnloser(player1);
+// });
 
 // player2.thisThrow.addEventListener("click", () => {
 //   //hide this throw button, appear the other player's
@@ -130,4 +151,4 @@ player1.throwButton.addEventListener("click", () => {
 
 // let throwPlayer2 = 0;
 // let scoreplayer2 = 0;
-// let player2 = "";
+// let player2 = ""};

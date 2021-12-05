@@ -3,7 +3,8 @@
 * {
   font-family: "Special Elite", cursive;
 }
-
+/* 
+altering anchor decorations */
 a,
 a:visited {
   text-decoration: underline;
@@ -23,6 +24,8 @@ a:hover {
   display: flex;
   justify-self: center;
 }
+
+/* link to single player page */
 .toggle {
   display: flex;
   justify-self: end;
@@ -43,8 +46,9 @@ input {
   padding: 15px 32px;
 }
 
+/* styling buttons */
 button {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -100,6 +104,7 @@ button {
   font-size: 20px;
 }
 
+/* media queries for phone, arrange in column */
 @media only screen and (max-width: 480px) {
   #userbox {
     margin-left: 20%;

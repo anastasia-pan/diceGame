@@ -59,6 +59,7 @@ const replaceImage = (player) => {
   player.dieimage.src = `dice/Dice${player.throwValue}.svg`;
 };
 
+//function to return a loser value to key from object player, and declare a winner
 const returnloser = (player) => {
   if (player.throwValue == 1) {
     console.log("A 1");
@@ -82,6 +83,7 @@ const returnloser = (player) => {
   }
 };
 
+//this doesn't work, and I'm not sure why yet. Gameplay still possible
 const hidebuttons = () => {
   if ((player1.throwButton.style.display = "block")) {
     player1.throwButton.style.display = "hide";
@@ -93,7 +95,7 @@ const hidebuttons = () => {
     return;
   }
 };
-
+//function that takes a parameter of player, calls other functions and alters the players object values
 const roll = (player) => {
   player.throwButton.addEventListener("click", () => {
     //hide this throw button, appear the other player's
@@ -109,6 +111,7 @@ const roll = (player) => {
   });
 };
 
+//call on function roll using the objects player 1 and 2 as arguments
 roll(player1);
 roll(player2);
 // };

@@ -15,7 +15,7 @@ a:hover {
   color: green;
 }
 .header {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
@@ -36,14 +36,30 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.explainscore {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#topscore {
+  align-self: center;
+}
+
+#userbox {
+  padding: 10px 32px;
+  margin-right: 10px;
+}
+
+input {
+  padding: 15px 32px;
+}
+
 .diceboxes {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  margin: 20px;
-}
-input {
-  padding: 15px 32px;
 }
 
 /* styling buttons */
@@ -106,8 +122,11 @@ button {
 
 /* media queries for phone, arrange in column */
 @media only screen and (max-width: 480px) {
-  #userbox {
-    margin-left: 20%;
+  .explainscore {
+    display: inline;
+  }
+  #topscore {
+    margin-left: 15%;
   }
   #userinput {
     margin-top: 5px;

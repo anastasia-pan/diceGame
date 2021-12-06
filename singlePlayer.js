@@ -1,7 +1,7 @@
 let userinput = document.getElementById("userinput");
 let userbox = document.getElementById("userbox");
 let inputButton = document.getElementById("inputButton");
-let topscore = document.getElementById("topscore");
+let topscore = document.getElementById("desiredscore");
 let scoretext = document.getElementById("scoreValuePlayer1");
 let thisThrow = document.getElementById("throwButton");
 let numberText = document.getElementById("numberText");
@@ -15,7 +15,7 @@ let throwNumber = 0;
 inputButton.addEventListener("click", () => {
   desiredscore = userinput.value;
   userbox.style.visibility = "hidden";
-  topscore.textContent = `Don't go above ${desiredscore}!`;
+  topscore.textContent = desiredscore;
 });
 
 function getRandomArbitrary() {

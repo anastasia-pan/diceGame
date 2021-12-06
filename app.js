@@ -3,7 +3,7 @@
 let userinput = document.getElementById("userinput");
 let userbox = document.getElementById("userbox");
 let inputButton = document.getElementById("inputButton");
-let topscore = document.getElementById("topscore");
+let topscore = document.getElementById("desiredscore");
 const resetButton = document.getElementById("resetButton");
 const sound = document.getElementById("sound");
 let winnerhere = document.getElementById("winnerhere");
@@ -14,7 +14,7 @@ let desiredscore = 20;
 inputButton.addEventListener("click", () => {
   desiredscore = userinput.value;
   userbox.style.visibility = "hidden";
-  topscore.textContent = `Don't go above ${desiredscore}!`;
+  topscore.textContent = desiredscore;
 });
 
 // function to generate randomnumber 1-6 and assign to variable throwValue

@@ -3,6 +3,10 @@
 * {
   font-family: "Special Elite", cursive;
 }
+
+h2 {
+  font-size: 20px;
+}
 /* 
 altering anchor decorations */
 a,
@@ -54,6 +58,7 @@ body {
 }
 
 input {
+  width: 30px;
   padding: 15px 32px;
 }
 
@@ -121,6 +126,20 @@ button {
 }
 
 /* media queries for phone, arrange in column */
+
+@media only screen and (max-width: 1070px) {
+  #userbox {
+    display: flex;
+    flex-direction: column;
+  }
+  #userinput {
+    width: 150px;
+    padding: 15px 32px;
+    margin-top: 20px;
+    align-self: center;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .explainscore {
     display: inline;
